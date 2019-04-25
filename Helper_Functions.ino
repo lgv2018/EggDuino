@@ -8,6 +8,7 @@ void initHardware(){
 	pinMode(enableRotMotor, OUTPUT);
 	pinMode(enablePenMotor, OUTPUT);
 	pinMode(engraverPin, OUTPUT);
+ pinMode(motorEnableIndicator, OUTPUT);
 
 	rotMotor.setMaxSpeed(2000.0);
 	rotMotor.setAcceleration(10000.0);
