@@ -34,22 +34,23 @@
 #ifdef BOARD_ZAGGO
 	//Zaggo SphereBot design: http://pleasantsoftware.com/developer/3d/spherebot/
 	//Rotational Stepper:
-	#define step1 11
-	#define dir1 10
-	#define enableRotMotor 9
+	#define dir1 4
+	#define step1 3
+	#define enableRotMotor 2
 	#define rotMicrostep 16  //MicrostepMode, only 1,2,4,8,16 allowed, because of Integer-Math in this Sketch
 	//Pen Stepper:
-	#define step2 8
 	#define dir2 7
-	#define enablePenMotor 6
+	#define step2 6
+	#define enablePenMotor 5
 	#define penMicrostep 16 //MicrostepMode, only 1,2,4,8,16 allowed, because of Integer-Math in this Sketch
 	//Servo
-	#define servoPin 3
+	#define servoPin 9
 	#define engraverPin 5
 	//Buttons (uncomment to enable)
-	//#define prgButton 2 // PRG button
-	//#define penToggleButton 12 // pen up/down button
-	//#define motorsButton 4 // motors enable button
+	#define prgButton A0 // PRG button
+	#define penToggleButton A1 // pen up/down button
+	#define motorsButton A2 // motors enable button
+  #define motorEnableIndicator A3 // motors enable indicator LED
 #endif
 
 #ifdef BOARD_CNCSHIELD
@@ -107,8 +108,8 @@ SerialCommand SCmd;
 // Variables... be careful, by messing around here, everything has a reason and crossrelations...
 int penMin=0;
 int penMax=0;
-int penUpPos=5;  //can be overwritten from EBB-Command SC
-int penDownPos=20; //can be overwritten from EBB-Command SC
+int penUpPos=58;  //can be overwritten from EBB-Command SC
+int penDownPos=63; //can be overwritten from EBB-Command SC
 int servoRateUp=0;
 int servoRateDown=0;
 long rotStepError=0;

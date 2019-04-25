@@ -1,4 +1,4 @@
-
+b
 
 void initHardware(){
 	// enable eeprom wait in avr/eeprom.h functions
@@ -47,12 +47,14 @@ void motorsOff() {
 	digitalWrite(enableRotMotor, HIGH);
 	digitalWrite(enablePenMotor, HIGH);
 	motorsEnabled = 0;
+  digitalWrite(motorEnableIndicator, LOW);
 }
 
 void motorsOn() {
 	digitalWrite(enableRotMotor, LOW) ;
 	digitalWrite(enablePenMotor, LOW) ;
 	motorsEnabled = 1;
+  digitalWrite(motorEnableIndicator, HIGH);
 }
 
 void toggleMotors() {
