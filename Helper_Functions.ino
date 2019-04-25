@@ -1,4 +1,3 @@
-b
 
 void initHardware(){
 	// enable eeprom wait in avr/eeprom.h functions
