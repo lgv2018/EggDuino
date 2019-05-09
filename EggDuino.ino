@@ -45,7 +45,7 @@
 	#define penMicrostep 16 //MicrostepMode, only 1,2,4,8,16 allowed, because of Integer-Math in this Sketch
 	//Servo
 	#define servoPin 9
-	#define engraverPin 5
+	//#define engraverPin 5
 	//Buttons (uncomment to enable)
 	#define prgButton A0 // PRG button
 	#define penToggleButton A1 // pen up/down button
@@ -108,8 +108,8 @@ SerialCommand SCmd;
 // Variables... be careful, by messing around here, everything has a reason and crossrelations...
 int penMin=0;
 int penMax=0;
-int penUpPos=58;  //can be overwritten from EBB-Command SC
-int penDownPos=63; //can be overwritten from EBB-Command SC
+int penUpPos=55;  //can be overwritten from EBB-Command SC
+int penDownPos=50; //can be overwritten from EBB-Command SC
 int servoRateUp=0;
 int servoRateDown=0;
 long rotStepError=0;

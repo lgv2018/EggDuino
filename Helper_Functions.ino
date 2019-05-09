@@ -7,8 +7,12 @@ void initHardware(){
 
 	pinMode(enableRotMotor, OUTPUT);
 	pinMode(enablePenMotor, OUTPUT);
+#ifdef engraverPin
 	pinMode(engraverPin, OUTPUT);
+#endif
+#ifdef motorEnableIndicator
  pinMode(motorEnableIndicator, OUTPUT);
+#endif
 
 	rotMotor.setMaxSpeed(2000.0);
 	rotMotor.setAcceleration(10000.0);
@@ -47,14 +51,18 @@ void motorsOff() {
 	digitalWrite(enableRotMotor, HIGH);
 	digitalWrite(enablePenMotor, HIGH);
 	motorsEnabled = 0;
+  #ifdef motorEnableIndicator
   digitalWrite(motorEnableIndicator, LOW);
+  #endif
 }
 
 void motorsOn() {
 	digitalWrite(enableRotMotor, LOW) ;
 	digitalWrite(enablePenMotor, LOW) ;
 	motorsEnabled = 1;
+  #ifdef motorEnableIndicator
   digitalWrite(motorEnableIndicator, HIGH);
+  #endif
 }
 
 void toggleMotors() {

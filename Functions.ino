@@ -273,7 +273,9 @@ void pinOutput(){
 	//PO,B,3,1 = enable engraver
 	if (arg1[0] == 'B' && arg2[0] == '3') {
 		val = atoi(arg3);
+   #ifdef engraverPin
 		digitalWrite(engraverPin, val);
+   #endif
 	}
 	sendAck();
 }
@@ -285,7 +287,9 @@ void setEngraver(){
 	arg = SCmd.next();
 	if (arg != NULL) {
 		val = atoi(arg);
+    #ifdef engraverPin
 		digitalWrite(engraverPin, val);
+    #endif
 	}
 	sendAck();
 }
