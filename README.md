@@ -1,5 +1,6 @@
-This is the fork of cocktailyogi/EggDuino firmware with added support for servo lowering/raising speed and pin assignment for Protoneer CNC Shield.
+This is the fork of Yura80/EggDuino which itself is the fork of cocktailyogi/EggDuinofirmware with added support for servo lowering/raising speed and pin assignment for Protoneer CNC Shield.
 
+I (schlion) have added support for a Motor Enable indicator LED and added ifdef flags for the engraver pin.
 
 Eggduino
 ====
